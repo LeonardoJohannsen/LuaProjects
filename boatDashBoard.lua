@@ -10,8 +10,7 @@ COLORS = {
 
 -- Tick function that will be executed every logic tick
 function onTick()
-	value = input.getNumber(1)			 -- Read the first number from the script's composite input
-	
+	value = input.getNumber(1)			
 	compass =  (input.getNumber(2)+0.5)*360
 	compass = compass // 1
 	centerX = 48
@@ -208,7 +207,6 @@ function onDraw()
     end
 	screen.drawTextBox(27, 4, 45, 5, math.floor(compass) .. "º", 0, 0)
 	
-	
 	--SPEED
 	screen.drawTextBox(25, 58, 45, 5, math.floor(value) .. "m/s", 0, 0)
 	
@@ -240,6 +238,5 @@ function onDraw()
 	--Battery
 	drawGauge(power, 13, 62, 25, 8, COLORS.highlight, "BAT")
 	
-
 
 end
